@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indoor Map</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha512-jGR1T3dQerLCSm/IGEGbndPwzszJBlKQ5Br9vuB0Pw2iyxOy+7AK+lJcCC8eaXyz/9du+bkCy4HXxByhxkHf+w==" crossorigin="anonymous"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+  <!-- <script src="jquery.maphilight.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js" integrity="sha512-AXsnvY/qS75ZpZGBz0CkJHMY55DNWyTeXmjZU2W8IZNHcnxSP31UuAaiCWfdajWk+a3kAeSX8VpYLsP635IGuA==" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+  <style type="text/css">
+    .small {
+      max-width: 8rem;
+    }
+    .ui-widget-content a {
+        color: #333;
+        text-decoration: none;
+    }    
+  </style>
+</head>
+<!-- <link rel="stylesheet" href="./index.css"/> -->
+  <body>
+
+    <span style="text-align: center; display: block;">
+      
+      <img src="indoor1.png" alt="" usemap="#map" id="imap" />
+      <map name="map">
+          <area shape="poly" coords="543, 582, 375, 272, 132, 375, 142, 400, 195, 382, 212, 412, 190, 419, 210, 465, 202, 468, 210, 487, 197, 492, 202, 511, 193, 515, 207, 554, 217, 547, 235, 589, 242, 585, 251, 609, 270, 599, 303, 679" />
+          <area shape="poly" coords="478, 412, 515, 398, 526, 420, 486, 438" />
+          <area shape="poly" coords="531, 337, 661, 283, 684, 318, 636, 336, 549, 357, 532, 358, 524, 338" />
+          <area shape="poly" coords="605, 370, 673, 352, 727, 439, 665, 469" />
+          <area shape="poly" coords="675, 351, 719, 332, 787, 431, 774, 437, 796, 464, 759, 483" />
+          <area shape="poly" coords="721, 332, 764, 313, 849, 431, 814, 453, 799, 429, 786, 431" />
+          <area shape="poly" coords="766, 314, 807, 292, 893, 405, 851, 431" />
+          <area shape="poly" coords="844, 272, 885, 324, 918, 308, 965, 368, 893, 405, 808, 292" />
+          <area shape="poly" coords="875, 251, 917, 305, 887, 324, 847, 270" />
+          <area shape="poly" coords="904, 233, 935, 269, 916, 281, 887, 241" />
+          <area shape="poly" coords="946, 182, 976, 220, 1017, 207, 1056, 249, 1015, 314, 977, 271, 989, 263, 955, 228, 935, 239, 901, 196" />
+          <area shape="poly" coords="948, 180, 978, 220, 1018, 207, 981, 166" />
+          <area shape="poly" coords="983, 164, 1055, 248, 1084, 206, 1032, 148" />
+          <area shape="poly" coords="1081, 139, 1109, 166, 1084, 200, 1038, 157" />
+          <area shape="poly" coords="915, 71, 892, 42, 1007, 54, 1026, 77, 964, 99, 935, 64" />
+          <area shape="poly" coords="943, 106, 963, 100, 937, 67, 919, 74" />
+          <area shape="poly" coords="870, 80, 893, 71, 901, 82, 916, 76, 941, 107, 903, 124" />
+          <area shape="poly" coords="829, 96, 848, 122, 835, 127, 847, 144, 900, 124, 866, 80" />
+          <area shape="poly" coords="378, 275, 395, 265, 411, 303, 393, 308" />
+          <area shape="poly" coords="396, 263, 423, 254, 443, 292, 410, 303" />
+          <area shape="poly" coords="712, 63, 732, 55, 750, 80, 740, 82, 769, 121, 802, 109, 835, 150, 784, 161" />
+          <area shape="poly" coords="648, 56, 692, 43, 780, 161, 738, 174" />
+          <area shape="poly" coords="521, 216, 541, 251, 498, 273, 479, 232" />
+          <area shape="poly" coords="444, 247, 476, 234, 498, 278, 462, 294" />
+          <area shape="poly" coords="528, 217, 543, 250, 585, 231, 564, 198" />
+          <area shape="poly" coords="540, 205, 506, 143, 530, 134, 516, 107, 624, 64, 696, 187, 585, 229, 563, 197" />
+      </map>
+
+    </span>
+
+    <div id="dialog" title="ООО Рога и копыта">
+
+      <p>Супермаркет - один из крупнейших на Дальнем Востоке. </p>
+      <pre>
+У нас вы найдете:
+•&nbsp;материалы для строительства;
+•&nbsp;материалы для ремонта;
+•&nbsp;материалы для отделки;
+•&nbsp;товары для отдыха;
+•&nbsp;товары для дома;
+•&nbsp;товары для сада и огорода.
+
+Для всех покупателей действует удобная система скидок.        
+      </pre>
+
+      <p>
+        <i class="far fa-clock" style="color: blueviolet;"></i> Работаем с 9:00 до 18:00
+      </p>
+
+      <a data-fancybox="gallery" href="https://source.unsplash.com/QkPb5g9p338/1279x719"><img src="https://source.unsplash.com/QkPb5g9p338/416x234" class="small" /></a>
+
+      <a data-fancybox href="https://www.youtube.com/watch?v=1mOeSk3rWPY"><img src="https://i.ytimg.com/an_webp/1mOeSk3rWPY/mqdefault_6s.webp?du=3000&sqp=CLStjIMG&rs=AOn4CLAgZDi1pIV06cVizTxAxPYnUe5Wbg" class="small"></a>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+      $.fn.maphilight.defaults = {
+        fill: true,
+        fillColor: '000000',
+        fillOpacity: 0.2,
+        stroke: true,
+        strokeColor: 'ff0000',
+        strokeOpacity: 1,
+        strokeWidth: 1,
+        fade: true,
+        alwaysOn: false,
+        neverOn: false,
+        groupBy: false,
+        wrapClass: true,
+        shadow: false,
+        shadowX: 0,
+        shadowY: 0,
+        shadowRadius: 6,
+        shadowColor: '000000',
+        shadowOpacity: 0.8,
+        shadowPosition: 'outside',
+        shadowFrom: false
+      }
+
+      $('#imap').maphilight()
+
+      $('map area').on('click',function(e) {
+        console.log(e)
+        $( "#dialog" ).dialog( "open" );
+      })
+
+        $( function() {
+          $( "#dialog" ).dialog({
+            autoOpen: false,
+            width: 600,
+            height: 400,
+
+            show: {
+              effect: "blind",
+              duration: 500
+            },
+            hide: {
+              // effect: "explode",
+              // effect: "drop",
+              effect: "blind",
+              duration: 500
+            }
+          });
+       
+          // $( "#opener" ).on( "click", function() {
+          //   $( "#dialog" ).dialog( "open" );
+          // });
+        } );
+
+      $('#squidheadlink').mouseover(function(e) {
+          // $('#squidhead').mouseover();
+      }).mouseout(function(e) {
+          // $('#squidhead').mouseout();
+      }).click(function(e) { e.preventDefault(); });
+
+    </script>
+  </body>
+</html>
